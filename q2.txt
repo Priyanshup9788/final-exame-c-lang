@@ -1,0 +1,33 @@
+// smallest element in 1d array
+#include <stdio.h>
+
+int main() {
+    
+    int arr[5];
+    
+   
+    
+    for(int i=0;i<5;i++){
+        printf("Enter an element of arr[%d]:-",i);
+        scanf("%d",&arr[i]);
+    }
+    
+    for(int i=0;i<5;i++){
+        printf("\narr[%d] = %d",i,arr[i]);
+    }
+    
+    
+    int min=arr[0];
+    
+    for(int i=0;i<5;i++){
+        if(arr[i]<min)
+        {
+            min=arr[i];
+        }
+    }
+    
+    printf("\nMin Value:- %d",min);
+   
+
+    return 0;
+}

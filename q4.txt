@@ -1,0 +1,19 @@
+// square of element using pointer
+#include <stdio.h>
+
+int main() {
+    int arr[5];
+    
+    for(int i=0;i<5;i++)
+    {
+        printf("Enter an Element of arr[%d]=",i);
+        scanf("%d",arr+i);
+        
+    }
+    
+    for(int i=0;i<5;i++)
+    {
+        printf("\n arr[%d]=%d",i,(*(arr+i))**(arr+i));
+    }
+    return 0;
+}

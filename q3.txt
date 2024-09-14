@@ -1,0 +1,44 @@
+// function to reverse a 3 digit number
+#include <stdio.h>
+
+int reverse(int num)
+{
+    int rem,rev=0;
+    while(num!=0)
+    {
+        rem=num%10;
+        rev=rev*10+rem;
+        num=num/10;
+    }
+    return rev;
+}
+
+int main() {
+    
+    int num,temp,count=0,rev;
+    
+    printf("\n Enter a number:- ");
+    scanf("%d",&num);
+    
+    temp=num;
+    
+    while(temp!=0)
+    {
+        count++;
+        temp=temp/10;
+    }
+    
+   
+   if(count!=3){
+       printf("\n number is not 3 digit");
+   }
+   else{
+       rev=reverse(num);
+       printf("\noriginal number=%d",num);
+       printf("\n Reversed number=%d",rev);
+   }
+    
+    
+
+    return 0;
+}

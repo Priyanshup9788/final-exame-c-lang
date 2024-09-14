@@ -1,0 +1,42 @@
+// structure store object as array object
+#include <stdio.h>
+
+struct House{
+    int room_quantity,established_year;
+    char city[50];
+};
+
+int main() {
+   
+   int n;
+   printf("Enter the number of house:- ");
+   scanf("%d",&n);
+   
+   struct House h[n];
+   
+   for(int i=0;i<n;i++)
+   {
+       printf("Enter Room Quantity:- ");
+       scanf("%d",&h[i].room_quantity);
+       
+       printf("Enter Room Established Year:- ");
+       scanf("%d",&h[i].established_year);
+       
+       printf("Enter City:- ");
+       scanf("%s",h[i].city);
+       
+       printf("\n");
+   }
+   
+   for(int i=0;i<n;i++)
+   {
+       printf("\nRoom Quantity:= %d",h[i].room_quantity);
+       printf("\nRoom Established Year:= %d",h[i].established_year);
+       printf("\ncity:= %s",h[i].city);
+       
+       printf("\n");
+       
+   }
+
+    return 0;
+}
